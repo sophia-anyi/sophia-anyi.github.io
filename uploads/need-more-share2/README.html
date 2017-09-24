@@ -47,15 +47,29 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=0.4.5.2" />
 
 
-<meta name="description" content="当你温柔，却有力量。">
+<meta name="description" content="update：已加上QQ空间，人人网，豆瓣的支持。
+起因本来 V2MM 一直使用 MoreBasicShare 相安无事的，在将 MoreBasicShare 移植到 V2MM 的博客评论系统的时候，发现 MoreBasicShare 有几点缺陷难以移植：
+
+代码结构不好，不方便扩展新的分享方式，其中用了大量的字符串拼接；
+依赖 jQuery, 而我们的博客评论系统是不依赖 jQuery 的；">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anyi">
-<meta property="og:url" content="http://sophia-anyi.github.io/archives/2016/07/index.html">
+<meta property="og:url" content="http://sophia-anyi.github.io/uploads/need-more-share2/README.html">
 <meta property="og:site_name" content="Anyi">
-<meta property="og:description" content="当你温柔，却有力量。">
+<meta property="og:description" content="update：已加上QQ空间，人人网，豆瓣的支持。
+起因本来 V2MM 一直使用 MoreBasicShare 相安无事的，在将 MoreBasicShare 移植到 V2MM 的博客评论系统的时候，发现 MoreBasicShare 有几点缺陷难以移植：
+
+代码结构不好，不方便扩展新的分享方式，其中用了大量的字符串拼接；
+依赖 jQuery, 而我们的博客评论系统是不依赖 jQuery 的；">
+<meta property="og:image" content="https://github.com/revir/need-more-share2/raw/master/screenshot.png">
+<meta property="og:updated_time" content="2017-04-27T13:51:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anyi">
-<meta name="twitter:description" content="当你温柔，却有力量。">
+<meta name="twitter:description" content="update：已加上QQ空间，人人网，豆瓣的支持。
+起因本来 V2MM 一直使用 MoreBasicShare 相安无事的，在将 MoreBasicShare 移植到 V2MM 的博客评论系统的时候，发现 MoreBasicShare 有几点缺陷难以移植：
+
+代码结构不好，不方便扩展新的分享方式，其中用了大量的字符串拼接；
+依赖 jQuery, 而我们的博客评论系统是不依赖 jQuery 的；">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +81,13 @@
 
 
 
-  <title> 归档 | Anyi </title>
+  <title>
+  
+
+  
+     | Anyi
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -90,7 +110,7 @@
 
 
 
-  <div class="container one-column  page-archive ">
+  <div class="container one-column ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -188,71 +208,57 @@ inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
       <div class="main-inner">
         <div id="content" class="content"> 
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
+    
+      <p>update：已加上QQ空间，人人网，豆瓣的支持。</p>
+<h2 id="起因">起因</h2><p>本来 V2MM 一直使用 <a href="https://github.com/revir/more-basic-share/" target="_blank" rel="external">MoreBasicShare</a> 相安无事的，在将 <a href="https://github.com/revir/more-basic-share/" target="_blank" rel="external">MoreBasicShare</a> 移植到 V2MM 的<a href="https://nodebb.tech/blog-comments2-bu-jin-jin-shi-yi-ge-bo-ke-ping-lun-xi-tong/" target="_blank" rel="external">博客评论系统</a>的时候，发现 <a href="https://github.com/revir/more-basic-share/" target="_blank" rel="external">MoreBasicShare</a> 有几点缺陷难以移植：</p>
+<ul>
+<li>代码结构不好，不方便扩展新的分享方式，其中用了大量的字符串拼接；</li>
+<li>依赖 jQuery, 而我们的博客评论系统是不依赖 jQuery 的；</li>
+</ul>
+<p>偶然发现一个老外写的纯 Javascript 的 <a href="https://github.com/DzmVasileusky/needShareButton" target="_blank" rel="external">Need Share Button</a>, 效果非常好，于是就 Clone 了过来，扩展了一下，增加了很多国内的分享网站，做得更傻瓜易用了一些。</p>
+<h2 id="Demo">Demo</h2><p>可以见 V2MM 上的分享按钮，此插件还包含一个 <a href="https://github.com/revir/need-more-share2/blob/master/demo/index.html" target="_blank" rel="external">Demo</a> 页面，需把项目 clone 到本地展示。</p>
+<p><img src="https://github.com/revir/need-more-share2/raw/master/screenshot.png" alt="screenshot"></p>
+<h2 id="使用方式">使用方式</h2><p>有多种方式使用，最简单的方法，加载 js 和 css 后，创建一个 class 名为 <code>need-share-button</code> 的分享按钮就好了，其他什么都不用做。</p>
+<p>第一步：在网页里加载 <strong>needsharebutton.min.js</strong> 和 <strong>needsharebutton.min.css</strong>。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;!-- needsharebutton Javascript file --&#62;&#10;&#60;script src=&#34;js/needsharebutton.min.js&#34;&#62;&#60;/script&#62;&#10;&#60;!-- needsharebutton CSS file --&#62;&#10;&#60;link href=&#34;css/needsharebutton.min.css&#34; rel=&#34;stylesheet&#34; /&#62;</span><br></pre></td></tr></table></figure></p>
+<p>第二步：创建一个<code>need-share-button</code>，插件会自动找到所有 <code>need-share-button</code>, 制作成分享按钮。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;button  class=&#34;btn btn-default need-share-button&#34;&#62;Share&#60;/button&#62;</span><br></pre></td></tr></table></figure>
+<p>这样你会看到网页上的 Share Button 已经可以使用了， 还可以通过 <code>data-share-</code> 传参。</p>
+<p>第三步：如果需要使用别的名字，可以手动调用 <code>needShareButton</code> 函数，比如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new needShareButton(document.getElementById('my-share-button'));</span><br><span class="line"># or</span><br><span class="line">new needShareButton('#my-share-button');</span><br></pre></td></tr></table></figure>
+<h2 id="needShareButton_函数">needShareButton 函数</h2><p><code>needShareButton</code> 函数有两个参数：</p>
+<ol>
+<li>element, 可以是 Dom 节点，也可以是 CSS 选择器;</li>
+<li>options, 选项；</li>
+</ol>
+<h2 id="Options">Options</h2><p>Options 可以通过参数传进去，也可以放在 DOM 节点里（加上 <code>data-share-</code> 前缀）。</p>
+<ol>
+<li>iconStyle： <code>default</code> or <code>box</code>；</li>
+<li>boxForm： <code>horizontal</code> or <code>vertical</code>;</li>
+<li>position: <code>bottomCenter</code>, <code>top / middle / bottom + Left / Center / Right</code>;</li>
+<li>networks: 默认： <code>&#39;Weibo,Wechat,Douban,QQZone,Twitter,Pinterest,Facebook,GooglePlus,Reddit,Linkedin,Tumblr,Evernote&#39;</code>; 注意，默认没有 <code>RenRen</code>，如果需要分享到人人网，在 networks 参数里加上 <code>RenRen</code>;</li>
+<li>url: 默认： <code>location.href</code>;</li>
+<li>title: 默认：<code>document.title</code>;</li>
+<li>image: 默认从 <code>meta[property=&quot;og:image&quot;]</code> 或 <code>meta[name=&quot;twitter:image&quot;]</code> 取值；</li>
+<li>description: 默认从 <code>meta[property=&quot;og:description&quot;]</code> 或 <code>meta[name=&quot;twitter:description&quot;]</code> 取值；</li>
+</ol>
+<h2 id="感谢">感谢</h2><p>感谢<a href="https://github.com/DzmVasileusky/needShareButton" target="_blank" rel="external">DzmVasileusky</a>，此项目基于他的作品改编。</p>
 
-      
-      
-      
-
-      
+      <div class="post-spread">
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/27/micro-documentary-first-time-to-UK/" itemprop="url">
-              
-                <span itemprop="name">初遇英国</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-27T20:19:02+08:00"
-              content="2016 年 07 月 27 日" >
-          07-27
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
     
-
-  </section>
-
-  
-
+  </div>
 
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+          </div>
         
       </div>
 
@@ -414,12 +420,6 @@ inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
   
   
   
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  
-
-  
     
     
 
@@ -447,12 +447,6 @@ inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   <script type="text/javascript">
     $(document).ready(function () {

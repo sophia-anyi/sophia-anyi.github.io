@@ -36,7 +36,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Sophia,Anyi,Xiang" />
 
 
 
@@ -94,7 +94,9 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
+      <div class="header-inner"><script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
@@ -119,7 +121,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-archives">
@@ -157,6 +159,25 @@
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="local-search-input" class="st-search-input" />
+  </form>
+  <div id="local-search-result" class="local-search-result-cls"></div>
+
+
+<script type="text/javascript" id="local.search.active">
+var inputArea       = document.querySelector("#local-search-input");
+inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -380,14 +401,14 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">432</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -450,6 +471,10 @@
 </div>
 
 <div class="powered-by">
+  Hosted by <a href="https://pages.coding.me" >Coding Pages</a>
+</div>
+
+<div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -458,13 +483,35 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
+  
+  <span id="busuanzi_container_site_pv" style='display:none'>
   &nbsp;&nbsp; | &nbsp;&nbsp;
   您是本站第 <span id="busuanzi_value_site_pv"></span> 位访问者
-  <!-- 访客数 <span id="busuanzi_value_site_uv"></span> 人次 -->
+  </span>
+  
 </div>
+
 
 <!-- 不蒜子 -->
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = parseInt(100000);
+       function fixCount() {
+         if ($("#busuanzi_container_site_pv").css("display") != "none") {
+              clearInterval(int);
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+         }
+     }
+    });
+</script>
+
+
+
+<script type="text/javascript" src="/js/local_search.js"></script>
+
 
 
  </div>

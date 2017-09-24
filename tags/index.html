@@ -36,7 +36,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Sophia,Anyi,Xiang" />
 
 
 
@@ -53,7 +53,7 @@
 <meta property="og:url" content="http://sophia-anyi.github.io/tags/index.html">
 <meta property="og:site_name" content="Anyi">
 <meta property="og:description" content="当你温柔，却有力量。">
-<meta property="og:updated_time" content="2015-11-15T10:49:53.000Z">
+<meta property="og:updated_time" content="2017-06-20T13:08:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签云">
 <meta name="twitter:description" content="当你温柔，却有力量。">
@@ -101,7 +101,9 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
+      <div class="header-inner"><script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
@@ -126,7 +128,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-archives">
@@ -165,6 +167,25 @@
   
 
   
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="local-search-input" class="st-search-input" />
+  </form>
+  <div id="local-search-result" class="local-search-result-cls"></div>
+
+
+<script type="text/javascript" id="local.search.active">
+var inputArea       = document.querySelector("#local-search-input");
+inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script>
+
+
+
+    </div>
+  
 </nav>
 
  </div>
@@ -179,7 +200,7 @@
     
       <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 7 个标签
+            目前共计 432 个标签
         </div>
         <div class="tag-cloud-tags">
           <a href="/tags/Baker-Street/" style="font-size: 12px; color: #ccc">Baker Street</a> <a href="/tags/Beamish-Museum/" style="font-size: 12px; color: #ccc">Beamish Museum</a> <a href="/tags/London/" style="font-size: 12px; color: #ccc">London</a> <a href="/tags/Mary-King-s-Close/" style="font-size: 12px; color: #ccc">Mary King's Close</a> <a href="/tags/Sherlock-Holmes/" style="font-size: 12px; color: #ccc">Sherlock Holmes</a> <a href="/tags/Travel/" style="font-size: 21px; color: #6f6f6f">Travel</a> <a href="/tags/UK/" style="font-size: 30px; color: #111">UK</a>
@@ -229,14 +250,14 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">432</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -299,6 +320,10 @@
 </div>
 
 <div class="powered-by">
+  Hosted by <a href="https://pages.coding.me" >Coding Pages</a>
+</div>
+
+<div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -307,13 +332,35 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
+  
+  <span id="busuanzi_container_site_pv" style='display:none'>
   &nbsp;&nbsp; | &nbsp;&nbsp;
   您是本站第 <span id="busuanzi_value_site_pv"></span> 位访问者
-  <!-- 访客数 <span id="busuanzi_value_site_uv"></span> 人次 -->
+  </span>
+  
 </div>
+
 
 <!-- 不蒜子 -->
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = parseInt(100000);
+       function fixCount() {
+         if ($("#busuanzi_container_site_pv").css("display") != "none") {
+              clearInterval(int);
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+         }
+     }
+    });
+</script>
+
+
+
+<script type="text/javascript" src="/js/local_search.js"></script>
+
 
 
  </div>

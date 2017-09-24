@@ -95,7 +95,9 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
+      <div class="header-inner"><script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="site-meta ">
   
 
   <div class="custom-logo-site-title">
@@ -120,7 +122,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-archives">
@@ -158,6 +160,25 @@
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="local-search-input" class="st-search-input" />
+  </form>
+  <div id="local-search-result" class="local-search-result-cls"></div>
+
+
+<script type="text/javascript" id="local.search.active">
+var inputArea       = document.querySelector("#local-search-input");
+inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -217,13 +238,11 @@
           
 
           
-          <span>
+          <span id="busuanzi_container_page_pv">
           &nbsp; | &nbsp; 本文共被围观 <span id="busuanzi_value_page_pv"></span> 次
           </span>
           
 
-          
-            
           
 
           
@@ -252,10 +271,37 @@
 <p>韩寒的《后会无期》当中有一句话：「你都没有看过世界，哪里来的世界观？」想想也有点道理。我们在年轻的时候或是背包远行、或是出国留学又或是出国工作，其实都是看世界的一种方式。旅行就是生命中不断创造回忆的过程。</p>
 <p>于是，走着走着，我们会发现路越来越宽，风景越来越迷人，对生活的感悟越来越透彻，内心也不再浮躁。在看世界的过程中，我们感受着不同文化的碰撞，收获着友谊，也能够遇见最美的自己。</p>
 </span>
+        
+          <!-- NEED-MORE-SHARE2 Button BEGIN -->
+
+<!-- needsharebutton Javascript file -->
+<script src="/uploads/need-more-share2/dist/needsharebutton.min.js"></script>
+
+<!-- needsharebutton CSS file -->
+<link href="/uploads/need-more-share2/dist/needsharebutton.min.css" rel="stylesheet" />
+
+<!-- needsharebutton button -->
+<div style="text-align: center;">
+<div id="i-share"
+    class="btn btn-default need-share-button"
+    data-share-position="topCenter"
+    data-share-icon-style="default"
+    data-share-networks="Wechat,Weibo,Renren,Twitter,Facebook,GooglePlus,Douban,QQZone,Evernote">
+    <i class="icon-next-heart fa fa-heart"></i>
+</div>
+</div>
+<script>
+    new needShareButton(document.getElementById('i-share'));
+</script>
+
+<!-- NEED-MORE-SHARE2 Button END -->
+
+        
       
     </div>
 
     <footer class="post-footer">
+      
       
 
       
@@ -352,14 +398,14 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">432</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -433,6 +479,10 @@
 </div>
 
 <div class="powered-by">
+  Hosted by <a href="https://pages.coding.me" >Coding Pages</a>
+</div>
+
+<div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
@@ -441,13 +491,35 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
+  
+  <span id="busuanzi_container_site_pv" style='display:none'>
   &nbsp;&nbsp; | &nbsp;&nbsp;
   您是本站第 <span id="busuanzi_value_site_pv"></span> 位访问者
-  <!-- 访客数 <span id="busuanzi_value_site_uv"></span> 人次 -->
+  </span>
+  
 </div>
+
 
 <!-- 不蒜子 -->
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = parseInt(100000);
+       function fixCount() {
+         if ($("#busuanzi_container_site_pv").css("display") != "none") {
+              clearInterval(int);
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+         }
+     }
+    });
+</script>
+
+
+
+<script type="text/javascript" src="/js/local_search.js"></script>
+
 
 
  </div>

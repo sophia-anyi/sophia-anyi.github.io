@@ -2,6 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sophia-anyi.github.io/tags/index.html</loc>
+    <lastmod>2017-06-20T13:08:59.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/categories/index.html</loc>
+    <lastmod>2017-06-20T13:08:59.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/404.html</loc>
+    <lastmod>2017-06-20T13:08:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/demo/index.html</loc>
+    <lastmod>2017-04-27T13:51:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/README.html</loc>
+    <lastmod>2017-04-27T13:51:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/dist/needsharebutton.min.css</loc>
+    <lastmod>2017-04-27T13:51:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/package.json</loc>
+    <lastmod>2017-04-26T19:00:07.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/dist/fontello-embedded.css</loc>
+    <lastmod>2017-04-26T19:00:07.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/src/js/needsharebutton.js</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/LICENSE.html</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/src/less/needsharebutton.css</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/dist/needsharebutton.js</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/dist/needsharebutton.css</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/Gruntfile.js</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/dist/needsharebutton.min.js</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sophia-anyi.github.io/uploads/need-more-share2/csscomb.json</loc>
+    <lastmod>2017-04-25T17:15:47.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sophia-anyi.github.io/2016/08/17/mysterious-letter-from-baker-street-221b/</loc>
     <lastmod>2016-08-18T13:49:18.000Z</lastmod>
   </url>
@@ -24,21 +104,6 @@
   <url>
     <loc>http://sophia-anyi.github.io/about/index.html</loc>
     <lastmod>2016-08-11T00:19:17.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sophia-anyi.github.io/404.html</loc>
-    <lastmod>2015-11-15T10:50:53.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sophia-anyi.github.io/categories/index.html</loc>
-    <lastmod>2015-11-15T10:50:22.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sophia-anyi.github.io/tags/index.html</loc>
-    <lastmod>2015-11-15T10:49:53.000Z</lastmod>
   </url>
   
   <url>
