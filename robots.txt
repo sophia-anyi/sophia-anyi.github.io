@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /.hexo
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://anyi.im/sitemap.xml
