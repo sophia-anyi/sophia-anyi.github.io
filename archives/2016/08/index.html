@@ -462,24 +462,6 @@
 </div>
 
 
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-    
-    
-    var intervalTotalViews = setInterval(fixTotalViews, 100);
-    var offsetTotalViews   = parseInt(100000);
-    function fixTotalViews() {
-      if (document.getElementById('busuanzi_container_site_pv').style.display != "none") {
-        clearInterval(intervalTotalViews);
-        var el = document.getElementById("busuanzi_value_site_pv");
-        var value = parseInt(el.innerHTML) + offsetTotalViews;
-        el.innerHTML = '' + value;
-      }
-    }
-    
-  });
-</script>
-
 
 
 
