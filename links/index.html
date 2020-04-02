@@ -278,6 +278,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -615,6 +616,26 @@ document.addEventListener('visibilitychange', function () {
         pbOptions.networks = "Wechat,Weibo,renren,Twitter,Facebook,Douban,QQZone,Evernote,Mailto";
       new needShareButton('#needsharebutton-postbottom', pbOptions);
   </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '1412bb0f72549fdccb19',
+      clientSecret: '9644b9d31e7db0739b1c325ebaf7a0ede9d6ab09',
+      repo        : 'sophia-anyi.github.io',
+      owner       : 'sophia-anyi',
+      admin       : ['Liam0205, SophiaAnyi'],
+      id          : '343d09cb7e82097f80d39b1b9efbd055',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
     </div>
 </body>
 </html>
